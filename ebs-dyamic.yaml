@@ -4,10 +4,10 @@ metadata:
  name: ebs-sc
 provisioner: ebs.csi.aws.com
 volumeBindingMode: WaitForFirstConsumer
-allowVolumeExpansion: "true"
 parameters:
  csi.storage.k8s.io/fstype: xfs
  type: io1
  iopsPerGB: "50"
  encrypted: "true"
+allowVolumeExpansion: true
 reclaimPolicy: Retain
